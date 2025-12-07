@@ -1,155 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Central Taste – Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Taste | Coming Soon to Delray Beach</title>
+    <style>
+        /* Základní nastavení a fonty */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap');
 
-    .logo {
-  max-width: 220px;
-  width: 100%;
-  margin: 0 auto 3rem auto;
-  display: block;
-}
+        :root {
+            --bg-color: #1a1a1a; /* Tmavá káva */
+            --text-color: #f3f3f3;
+            --accent-color: #d4a373; /* Barva cremy/latte */
+            --secondary-bg: #2c2c2c;
+        }
 
-@media (min-width: 768px) {
-  .logo {
-    max-width: 280px;
-  }
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
 
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+        /* Hlavní sekce */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-      max-width: 500px;
-      line-height: 1.6;
-    }
+        /* Logo styl */
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-    }
+        .tagline {
+            font-size: 1.2rem;
+            color: #aaaaaa;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
 
-    input[type="email"] {
-      padding: 12px 16px;
-      font-size: 16px;
-      width: 280px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      transition: border-color 0.2s ease;
-    }
+        /* Hlavní text */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
 
-    input[type="email"]:focus {
-      outline: none;
-      border-color: #888;
-    }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #cccccc;
+            max-width: 600px;
+        }
 
-    button {
-      padding: 12px 20px;
-      font-size: 16px;
-      background-color: #111;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
+        /* Taste Profile Box */
+        .profile-box {
+            background-color: var(--secondary-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            margin-bottom: 40px;
+        }
 
-    button:hover {
-      background-color: #333;
-    }
+        .profile-box h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            font-family: 'Playfair Display', serif;
+        }
 
-    #thanks {
-      display: none;
-      margin-top: 25px;
-      color: #2e7d32;
-      font-weight: 500;
-    }
+        /* Kontakt */
+        .contact-info {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+        }
 
-    @media (max-width: 480px) {
-      input[type="email"] {
-        width: 90%;
-      }
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-      h1 {
-        font-size: 1.6rem;
-      }
+        /* Patička */
+        footer {
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #555;
+            border-top: 1px solid #333;
+        }
 
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+        /* Responzivita pro mobily */
+        @media (max-width: 600px) {
+            .logo { font-size: 2.5rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
-  <img src="logo.svg" alt="Central Taste Logo" class="logo">
-  <h1>European Taste is Coming</h1>
-  <p>Authentic groceries from Europe — delivered to your door in the US. Join our newsletter and enjoy <strong>10% off</strong> your first order.</p>
 
-  <form id="signupForm">
-    <input type="email" name="email" id="emailInput" required placeholder="Enter your email address">
-    <button type="submit">Notify Me</button>
-  </form>
+    <div class="container">
+        <div class="logo">Central Taste</div>
+        <div class="tagline">BOLD. CLASSIC. UNCOMPROMISED.</div>
 
-  <div id="thanks">
-    🎉 Thanks for signing up! Use code <strong>WELCOME10</strong> at launch.
-  </div>
+        <h1>Coming to Delray Beach<br>Spring 2026</h1>
+        
+        <p>
+            We are bringing the art of traditional espresso back to Florida. 
+            No trends, just perfect extraction, rich body, and the comfort of coffee 
+            as it was meant to be.
+        </p>
 
-  <script>
-    const form = document.getElementById('signupForm');
-    const thanks = document.getElementById('thanks');
+        <div class="profile-box">
+            <h3>Our Profile</h3>
+            <p>Chocolate • Toasted Nuts • Caramel • Full Body</p>
+            <p style="font-size: 0.9rem; margin-bottom: 0;">We focus on bold, low-acidity espresso blends paired perfectly with milk.</p>
+        </div>
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+        <div class="contact-info">
+            <p><strong>Business & Wholesale Inquiries:</strong></p>
+            <p>Kamil Niemczyk, Founder</p>
+            <p><a href="mailto:kamil@centraltaste.com">Connect via Email</a></p>
+            <p>(754) 262-9592</p>
+        </div>
+    </div>
 
-      const email = document.getElementById('emailInput').value;
+    <footer>
+        &copy; 2025 Central Taste. Delray Beach, Florida. All Rights Reserved.
+    </footer>
 
-      fetch("https://formsubmit.co/ajax/info@centraltaste.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          email: email,
-          _subject: "New subscriber - Central Taste",
-          _captcha: "false"
-        })
-      })
-      .then(response => {
-        if (response.ok) {
-          form.style.display = 'none';
-          thanks.style.display = 'block';
-        } else {
-          alert("Error submitting form. Try again.");
-        }
-      })
-      .catch(error => alert("Error: " + error));
-    });
-  </script>
 </body>
 </html>
